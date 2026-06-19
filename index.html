@@ -773,4 +773,160 @@
     </script>
 </body>
 </html>
-<h1>hassan sultan</h1>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hassan Bin Sultan — Stylish</title>
+<style>
+  :root{
+    --bg:#0f1724;
+    --glass: rgba(255,255,255,0.06);
+    --accent1: #7bffec;
+    --accent2: #6b8cff;
+  }
+
+  /* Page layout */
+  html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+  body{
+    display:flex;align-items:center;justify-content:center;
+    background:
+      radial-gradient(1200px 600px at 10% 10%, rgba(107,140,255,0.08), transparent 8%),
+      radial-gradient(1000px 500px at 90% 90%, rgba(123,255,236,0.06), transparent 10%),
+      var(--bg);
+    color:#fff;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    padding:2rem;
+  }
+
+  /* Card */
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: clamp(20px, 4vw, 40px);
+    border-radius: 20px;
+    backdrop-filter: blur(6px) saturate(110%);
+    box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    display:flex;flex-direction:column;align-items:center;gap:18px;
+    max-width:1000px;
+    width:100%;
+  }
+
+  /* Cool text styling */
+  .name{
+    font-size: clamp(36px, 7vw, 84px);
+    line-height:1;
+    font-weight:800;
+    letter-spacing: -0.02em;
+    position:relative;
+    text-transform: none;
+    display:inline-block;
+    padding: 6px 12px;
+  }
+
+  /* Gradient + holo shimmer using background-clip */
+  .name .grad{
+    background: linear-gradient(90deg, var(--accent1), #9be7ff 25%, var(--accent2) 60%, #d5a0ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position:relative;
+    z-index:2;
+    display:inline-block;
+  }
+
+  /* Soft neon glow */
+  .name .glow{
+    position:absolute;
+    left:50%; top:50%;
+    transform:translate(-50%,-50%);
+    width:115%; height:120%;
+    filter: blur(22px);
+    opacity:0.28;
+    background: linear-gradient(90deg, rgba(123,255,236,0.18), rgba(107,140,255,0.14));
+    border-radius:10px;
+    z-index:1;
+    pointer-events:none;
+  }
+
+  /* Animated holo line */
+  .holo{
+    position:absolute;
+    left:-30%; top:0;
+    height:100%;
+    width:60%;
+    background: linear-gradient(110deg, rgba(255,255,255,0.18), rgba(255,255,255,0.05), rgba(255,255,255,0.18));
+    mix-blend-mode: overlay;
+    transform: skewX(-18deg);
+    animation: sweep 3.2s ease-in-out infinite;
+    z-index:3;
+    pointer-events:none;
+  }
+  @keyframes sweep{
+    0% {left:-60%; opacity:0;}
+    18% {opacity:0.9;}
+    50% {left:100%; opacity:0.7;}
+    100% {left:180%; opacity:0;}
+  }
+
+  /* Subtext */
+  .subtitle{
+    font-size: clamp(12px, 1.8vw, 16px);
+    color: #bcd7ff;
+    opacity:0.9;
+    letter-spacing:0.06em;
+  }
+
+  /* Decorative underline (SVG) */
+  .underline{
+    width:80%;
+    max-width:640px;
+    height:28px;
+    margin-top:-8px;
+    opacity:0.9;
+  }
+
+  /* Responsive center */
+  .top{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+  }
+
+  /* small screen tweaks */
+  @media (max-width:520px){
+    .name{letter-spacing:-0.03em;}
+    .glow{filter: blur(18px); opacity:0.22;}
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <div class="name" aria-hidden="false">
+        <span class="glow" aria-hidden="true"></span>
+        <span class="holo" aria-hidden="true"></span>
+        <span class="grad">Hassan Bin Sultan</span>
+      </div>
+    </div>
+
+    <!-- decorative SVG underline -->
+    <svg class="underline" viewBox="0 0 800 60" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="g1" x1="0" x2="1">
+          <stop offset="0" stop-color="#7bffec" stop-opacity="0.45"/>
+          <stop offset="0.5" stop-color="#6b8cff" stop-opacity="0.32"/>
+          <stop offset="1" stop-color="#d5a0ff" stop-opacity="0.18"/>
+        </linearGradient>
+      </defs>
+      <path d="M6 30 C120 4, 260 56, 400 30 C540 4, 680 56, 794 30" fill="none" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+    </svg>
+
+    <div class="subtitle">A clean, animated, glass-style title — ready to customize</div>
+  </div>
+</body>
+</html>
